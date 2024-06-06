@@ -8,6 +8,9 @@
         #verify {
             display: none;
         }
+        #verify_message {
+            display: none;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -15,11 +18,15 @@
                 document.getElementById('verify').style.display = 'block';
             }, 1000);
         });
+
+        function verify() {
+            document.getElementById('verify_message').style.display = 'block';
+        }
     </script>
 </head>
 <body>
     <h1>Test for Delayed Button</h1>
-    <button id="verify">Verify</button>
+    <button id="verify" onclick="verify()">Verify</button>
     <p id="verify_message">Verification successful!</p>
 </body>
 </html>
